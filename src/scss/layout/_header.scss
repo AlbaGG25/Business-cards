@@ -15,6 +15,16 @@
     .mainImage {
         width: 25rem;
         margin-top: 15rem;
+
+        @media screen and (min-width: 768px) {
+          width: 42rem;
+          margin-top: 30rem;
+        
+            
+        }
+
+
+
     }
     
 

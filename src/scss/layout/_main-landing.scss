@@ -19,6 +19,12 @@
             font-family: $font-titlesLanding;
             font-size: 2rem;
             margin-top: 3.5rem;
+
+            @media screen and (min-width:768px) {
+                font-size: 2.5rem;
+                margin-top: -2rem;
+                
+            }
         }
 
 
@@ -28,6 +34,16 @@
             font-size: 1.3rem;
             text-align: center;
             margin-bottom: 2.5rem;
+
+            @media screen and (min-width:768px) {
+                font-size: 1.6rem;
+                width: 33rem;
+                margin-bottom: 3rem;
+                
+                
+            }
+
+
             
         }
 
@@ -35,8 +51,8 @@
 
             width: 27rem;
             height: 7.5rem;
-            border: solid #e17334 ;
-            //opacity: 21%;
+            border: solid  #e17334 ;
+            // opacity: 21%;
             border-radius: 4px;
             margin-bottom: 4.5rem;
             display: flex;
@@ -44,6 +60,13 @@
             align-items: center;
             text-align: center;
             gap: 4rem;
+
+            @media  screen and (min-width:768px) {
+                width: 33rem;
+                height: 8.6rem;
+                gap: 5rem;
+                
+            }
         }
 
         .buttonLanding {
@@ -57,12 +80,25 @@
             padding: 1rem 2rem ;
             border-radius: 21px;
 
+            @media screen and (min-width:768px) {
+
+                margin-top: 8rem;
+                
+            }
+
         }
 
         .iconsLanding {
             width: 3rem;
             height: 2.5rem; 
             color: $color-orange;
+
+            @media screen and (min-width:768px) {
+                width: 3.2rem;
+                height: 2.9rem;
+                
+            }
+
         }
 
         .captionLanding {
