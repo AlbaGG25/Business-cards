@@ -1,0 +1,39 @@
+.section{
+    background-color: gray ;
+    height: 457px;
+    &_reset{
+        text-transform: uppercase;
+        border: solid white 1px;
+        width: 75px;
+        height: 30px;
+        border-radius: 15px;
+
+        &_trash{
+            width: 11px;
+            height: 20px;
+        }
+    }
+    &_card{
+        
+        &_article{
+            &_title{
+                font-size: 1.8rem;
+                width: 206px;
+                height: 20px;
+                line-height: 1.11;
+
+            }
+            &_text{
+                font-size: 1rem;
+            }
+            &_container{
+                &_image{
+                    width: 240px;
+                    height: 200px;
+                    background-color: grey;
+                }
+                
+            }
+        }
+    }
+}
