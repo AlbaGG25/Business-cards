@@ -1,9 +1,9 @@
 .section{
-    background-color: $silver ;
+    background-color: gray ;
     height: 457px;
     &_reset{
         text-transform: uppercase;
-        border: solid $color-white-two 1px;
+        border: solid white 1px;
         width: 75px;
         height: 30px;
         border-radius: 15px;
@@ -30,7 +30,7 @@
                 &_image{
                     width: 240px;
                     height: 200px;
-                    background-color: $silver;
+                    background-color: grey;
                 }
                 
             }
