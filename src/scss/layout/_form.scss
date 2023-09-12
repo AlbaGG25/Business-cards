@@ -3,27 +3,110 @@
 .form_design {
     border-style: none;
     justify-items: space-between;
-
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem; 
+    border-bottom: 0.5px solid ;
+    width: 100vw; 
+    
     &_legend {
     display: flex; 
     text-transform: uppercase;
     font-family: $font-paragraph;
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    padding-top: 2.5rem;
     }
 
     &_legendh2 {
-       // margin-right: 41rem;
+       margin-left: 1rem;
+       color: $gunmetal;
     }
 
     &_palets {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        justify-content: right;
+        gap: 1.5rem; 
+
     }
 
     &_colors {
         text-transform: uppercase;
+        font-size: 1.4rem;
+        position: relative; 
+        top: 1.5rem;
+        color: $gunmetal;
+        font-family: $font-paragraph;
     }
 }
 
+.arrow {
+    width: 1.6rem;
+    height: 1.8rem; 
+    color: $gunmetal;
+    position: absolute;
+    left: 87%; 
+}
+
+.iconsForm {
+    width: 2.1rem;
+    height: 1.8rem; 
+    color: $color-orange;
+}
+
+.form_fill {
+    border-style: none;
+    justify-items: space-between;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem; 
+    border-bottom: 0.5px solid ;
+    width: 100vw; 
+
+    &_form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem; 
+      font-size: $font-paragraph;
+      color: $color-green; 
+    }
+
+    &_legend {
+        display: flex; 
+        text-transform: uppercase;
+        font-family: $font-paragraph;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding-top: 2.5rem;
+    }
+    &_legendh22 {
+        margin-left: 1rem;
+        color: $gunmetal;
+    }
+    &_formbutton{
+        background-color: $color-orange;
+        color: white;
+        border-radius: 3px;
+        border-style: none; 
+        width: 14rem;
+        height: 3rem; 
+        padding: 8px ;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    }
+    &_formlabel{
+        font-family: $font-paragraph;
+        font-size: 1.4rem; 
+    }
+    &_forminput {
+        height: 3rem; 
+        border: $hospital-green solid 1px; 
+    }
+    &_forminputimg {
+        width: 3rem;
+        height: 3rem; 
+        margin-left: 2rem;
+        border: $hospital-green solid 1px; 
+    }
+}
+
+::placeholder {
+    color: $pinkish-grey; 
+}
