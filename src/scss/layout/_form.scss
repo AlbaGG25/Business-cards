@@ -1,0 +1,29 @@
+
+
+.form_design {
+    border-style: none;
+    justify-items: space-between;
+
+    &_legend {
+    display: flex; 
+    text-transform: uppercase;
+    font-family: $font-paragraph;
+    font-weight: 600;
+    font-size: 1.8rem;
+    }
+
+    &_legendh2 {
+       // margin-right: 41rem;
+    }
+
+    &_palets {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &_colors {
+        text-transform: uppercase;
+    }
+}
+
