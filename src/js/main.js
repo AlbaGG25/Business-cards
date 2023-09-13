@@ -69,7 +69,14 @@ function handleClickLegendShare() {
   fieldsetDesign.classList.add('collapsed');
   fieldsetShare.classList.remove('collapsed');
   
+  
 }
 
 legendShare.addEventListener('click', handleClickLegendShare);
 
+//  const divHidden = document.getElementById('div2');
+
+// function hidden(){
+//   document.getElementById('divHidden').style.display = 'none';
+//   }
+// hidden();
