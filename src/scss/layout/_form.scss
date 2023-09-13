@@ -1,3 +1,14 @@
+.collapsed {
+    .form-heading{
+        .collap-arrow{
+            transform: rotate(180deg);
+        }
+    }
+    .collap-colors, .collap-fill, .collap-share, .collap-div2{
+        display: none;
+    }
+
+}
 
 
 .form_design {
@@ -192,3 +203,4 @@
         font-size: 1.4rem;
     }
 }
+
