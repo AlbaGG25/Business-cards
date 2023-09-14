@@ -94,10 +94,11 @@
         padding-top: 2.5rem;
         justify-content: space-between;
         width: 100%;
-    }
-    & div {
+        & div {
         display: flex; 
     }
+    }
+    
     &_legendh22 {
         margin-left: 1rem;
         color: $gunmetal;
