@@ -32,21 +32,9 @@ const legendDesign = document.querySelector('.js-design-legend');
 const legendFill = document.querySelector('.js-fill-legend');
 const legendShare = document.querySelector('.js-share-legend');
 
-/*
-function collapsedDesign() {
-  fieldsetDesign.classList.add('collapsed');
-}
-function collapsedFill() {
-  fieldsetFill.classList.add('collapsed');
-}
-function collapsedShare() {
-  fieldsetShare.classList.add('collapsed');
-}
-function collapsedDiv2() {
-  fieldsetDiv2.classList.add('collapsed');
-}*/
 
-//diseña
+
+// diseña
 function handleClickLegendDesign() {
   fieldsetFill.classList.add('collapsed');
   fieldsetDesign.classList.remove('collapsed');
@@ -74,9 +62,4 @@ function handleClickLegendShare() {
 
 legendShare.addEventListener('click', handleClickLegendShare);
 
-//  const divHidden = document.getElementById('div2');
 
-// function hidden(){
-//   document.getElementById('divHidden').style.display = 'none';
-//   }
-// hidden();

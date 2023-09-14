@@ -1,0 +1,15 @@
+.mainPrincipal {
+    
+@media screen and (min-width: 768px){
+    background-image: linear-gradient(to bottom, $color-bg, $color-white-two 9%);
+    display: flex;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr;
+    flex-direction: row-reverse;
+    
+    
+}
+
+
+
+}

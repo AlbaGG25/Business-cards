@@ -1,24 +1,19 @@
-.collapsed {
-    .form-heading{
-        .collap-arrow{
-            transform: rotate(180deg);
-        }
+
+
+
+
+
+.form {
+   
+    @media screen and (min-width:768px) {
+       width: 40%;
+        
     }
-    .collap-colors, .collap-fill, .collap-share, .collap-div2{
-        display: none;
-    }
 
-}
-
-
-
-
-
-.form_design {
+&_design {
     border-style: none;
     justify-items: space-between;
     padding: 2.5rem 2.5rem 2.5rem 2.5rem; 
-    width: 100vw; 
     border-bottom: 0.5px solid $white-three;
 
     &_legend {
@@ -28,6 +23,13 @@
     font-weight: 600;
     font-size: 1.2rem;
     padding-top: 2.5rem;
+    justify-content: space-between;
+    width: 100%;
+
+    & div {
+        display: flex; 
+        
+    }
     }
 
     &_legendh2 {
@@ -58,8 +60,7 @@
     width: 1.6rem;
     height: 1.8rem; 
     color: $gunmetal;
-    position: absolute;
-    left: 87%; 
+    
 }
 
 .iconsForm {
@@ -72,7 +73,7 @@
     border-style: none;
     padding: 2.5rem 2.5rem 2.5rem 2.5rem; 
     border-bottom: 0.5px solid $white-three;
-    width: 100vw; 
+    
 
     &_form {
       display: flex;
@@ -132,16 +133,24 @@
     align-items: center;
     padding: 2.5rem 2.5rem 2.5rem 2.5rem; 
     border-bottom: 0.5px solid $white-three;
-    width: 100vw; 
+     
 
 
     &_legend {
         display: flex; 
+        justify-content: space-between;
         text-transform: uppercase;
         font-family: $font-paragraph;
         font-weight: 600;
         font-size: 1.2rem;
         padding-top: 2.5rem;
+        width: 100%;
+
+        & div {
+            display: flex; 
+            
+            
+        }
     }
     &_legendh23 {
         margin-left: 1rem;
@@ -171,6 +180,7 @@
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
     
     }
+    ///form_share_div2 
     &_div2{
         margin-top: 2rem;
         border-top: 0.5px solid $white-three;
@@ -178,6 +188,11 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5rem; 
+    }
+
+    &_div2-hidden{
+
+        display: none;
     }
 
     &_div2-p{
@@ -207,4 +222,16 @@
         font-size: 1.4rem;
     }
 }
+}
 
+.collapsed {
+    .form-heading{
+        .collap-arrow{
+            transform: rotate(180deg);
+        }
+    }
+    .collap-colors, .collap-fill, .collap-share {
+        display: none;
+    }
+
+}

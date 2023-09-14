@@ -4,6 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width:768px) {
+        width: 60%;
+
+        
+    }
+
     &_reset{
         text-transform: uppercase;
         border: solid $color-white-two 1px; 
