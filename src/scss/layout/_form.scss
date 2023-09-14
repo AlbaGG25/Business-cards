@@ -6,8 +6,10 @@
 .form {
    
     @media screen and (min-width:768px) {
-       width: 40%;
-        
+       width: 60%;
+    }
+    @media screen and (min-width:1024px){
+        width:40%;
     }
 
 &_design {
@@ -17,14 +19,14 @@
     border-bottom: 0.5px solid $white-three;
 
     &_legend {
-    display: flex; 
-    text-transform: uppercase;
-    font-family: $font-paragraph;
-    font-weight: 600;
-    font-size: 1.2rem;
-    padding-top: 2.5rem;
-    justify-content: space-between;
-    width: 100%;
+        display: flex; 
+        text-transform: uppercase;
+        font-family: $font-paragraph;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding-top: 2.5rem;
+        justify-content: space-between;
+        width: 100%;
 
     & div {
         display: flex; 
@@ -90,6 +92,11 @@
         font-weight: 600;
         font-size: 1.2rem;
         padding-top: 2.5rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+    & div {
+        display: flex; 
     }
     &_legendh22 {
         margin-left: 1rem;
@@ -97,7 +104,7 @@
     }
     &_formbutton{
         background-color: $color-orange;
-        color: white;
+        color:$color-white-two;
         border-radius: 3px;
         border-style: none; 
         width: 14rem;
@@ -148,8 +155,6 @@
 
         & div {
             display: flex; 
-            
-            
         }
     }
     &_legendh23 {
@@ -157,7 +162,8 @@
         color: $gunmetal;
     }
     &_link{
-        text-decoration: none;
+        background-color: $color-orange;
+        border-style: none;
         font-family: $font-paragraph;
         font-weight: 600;
         color: white;
@@ -191,7 +197,6 @@
     }
 
     &_div2-hidden{
-
         display: none;
     }
 

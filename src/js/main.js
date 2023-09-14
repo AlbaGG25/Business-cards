@@ -27,13 +27,10 @@ btnReset.addEventListener('click', resetClick);*/
 const fieldsetDesign = document.querySelector('.js-fieldset_design');
 const fieldsetFill = document.querySelector('.js-fieldset_fill');
 const fieldsetShare = document.querySelector('.js-fieldset_share');
-const fieldsetDiv2 = document.querySelector('.js-div2');
+// const fieldsetDiv2 = document.querySelector('.js-div2');
 const legendDesign = document.querySelector('.js-design-legend');
 const legendFill = document.querySelector('.js-fill-legend');
 const legendShare = document.querySelector('.js-share-legend');
-
-
-
 // diseña
 function handleClickLegendDesign() {
   fieldsetFill.classList.add('collapsed');
@@ -56,8 +53,6 @@ function handleClickLegendShare() {
   fieldsetFill.classList.add('collapsed');
   fieldsetDesign.classList.add('collapsed');
   fieldsetShare.classList.remove('collapsed');
-  
-  
 }
 
 legendShare.addEventListener('click', handleClickLegendShare);
