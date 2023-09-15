@@ -42,10 +42,10 @@ function resetClick (event){
   namePreview.innerHTML='Nombre Apellido';
   jobPreview.innerHTML='Front-end Developer';
   //photoPreview.innerHTML='';
-  emailPreview.innerHTML='';
-  phonePreview.innerHTML='';
-  linkedinPreview.innerHTML='';
-  githubPreview.innerHTML='';
+  //emailPreview.innerHTML='';
+  //phonePreview.innerHTML='';
+  //linkedinPreview.innerHTML='';
+  //githubPreview.innerHTML='';
 }
 
 btnReset.addEventListener('click', resetClick);
