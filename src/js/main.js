@@ -1,8 +1,8 @@
 'use strict';
 
 /*1- boton reset
--evento 
-2- enlazar los inputs del formulario 
+-evento
+2- enlazar los inputs del formulario
 -con los iconos de la card
 -con nombre y puesto
 3-paleta de colores
@@ -11,32 +11,46 @@
 */
 
 //variables imput fomulario
-const nameUser = document.querySelector('.js-name');
-const job = document.querySelector('.js-job');
-const img = document.querySelector('.js-img');
-const email = document.querySelector('.js-email');
-const mobile = document.querySelector('.js-mobile');
-const lk = document.querySelector('.js-lk');
-const git = document.querySelector('.js-git');
-
-
+//const palette = document.querySelector('.js-palet1');
+const inputName = document.querySelector('.js-inputName');
+const inputJob = document.querySelector('.js-inputJob');
+const inputPhoto = document.querySelector('.js-inputPhoto');
+const inputEmail = document.querySelector('.js-inputEmail');
+const inputPhone = document.querySelector('.js-inputPhone');
+const inputLinkedin = document.querySelector('.js-inputLinkedin');
+const inputGithub = document.querySelector('.js-inputGithub');
+const namePreview = document.querySelector ('.js-nameCard');
+const jobPreview = document.querySelector ('.js-jobCard');
+const photoPreview = document.querySelector ('.js-photoCard');
+const emailPreview = document.querySelector ('.js-emailCard');
+const phonePreview = document.querySelector ('.js-phoneCard');
+const linkedinPreview = document.querySelector ('.js-linkedinCard');
+const githubPreview = document.querySelector ('.js-githubCard');
 //Boton reset
 const btnReset = document.querySelector ('.js-reset');
 
-function resetClick (){
+function resetClick (event){
   event.preventDefault();
-  nameUser.value='';
-  job.value='';  
-  img.value='';
-  email.value='';
-  mobile.value='';
-  lk.value='';
-  git.value='';
+  //palette.value: 1;
+  inputName.value='';
+  inputJob.value='';
+  inputPhoto.value='';
+  inputEmail.value='';
+  inputPhone.value='';
+  inputLinkedin.value='';
+  inputGithub.value='';
+  namePreview.innerHTML='Nombre Apellido';
+  jobPreview.innerHTML='Front-end Developer';
+  //photoPreview.innerHTML='';
+  emailPreview.innerHTML='';
+  phonePreview.innerHTML='';
+  linkedinPreview.innerHTML='';
+  githubPreview.innerHTML='';
 }
 
 btnReset.addEventListener('click', resetClick);
 
-
+///COLAPSABLES
 //variables collapsables
 const fieldsetDesign = document.querySelector('.js-fieldset_design');
 const fieldsetFill = document.querySelector('.js-fieldset_fill');
@@ -72,3 +86,41 @@ function handleClickLegendShare() {
 legendShare.addEventListener('click', handleClickLegendShare);
 
 
+////INPUTS FORMULARIOS
+const data = {
+  //palette.value: 1;
+  name: '',
+  job: '',
+  photo:  '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: ''
+};
+
+function updatePreview () {
+  if (data.name === ('')) {
+    namePreview.innerHTML = 'Nombre Apellido';
+  } else {
+    namePreview.innerHTML = data.name;
+  }
+
+  if (data.job === ('')) {
+    jobPreview.innerHTML  = 'Front-end Developer';
+  } else {
+    jobPreview.innerHTML = data.job;
+  }
+}
+
+function handleInputName () {
+  data.name = inputName.value;
+  updatePreview ();
+}
+inputName.addEventListener('input', handleInputName);
+
+function handleInputJob () {
+  data.job = inputJob.value;
+  updatePreview ();
+}
+
+inputJob.addEventListener('input', handleInputJob);
