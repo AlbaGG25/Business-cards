@@ -41,11 +41,11 @@ function resetClick (event){
   inputGithub.value='';
   namePreview.innerHTML='Nombre Apellido';
   jobPreview.innerHTML='Front-end Developer';
-  //photoPreview.innerHTML='';
-  //emailPreview.innerHTML='';
-  //phonePreview.innerHTML='';
-  //linkedinPreview.innerHTML='';
-  //githubPreview.innerHTML='';
+  //photoPreview.href='';
+  emailPreview.href='';
+  //phonePreview.href='';
+  //linkedinPreview.href='';
+  //githubPreview.href='';
 }
 
 btnReset.addEventListener('click', resetClick);
@@ -110,6 +110,8 @@ function updatePreview () {
   } else {
     jobPreview.innerHTML = data.job;
   }
+
+  emailPreview.href = 'mailto:' + data.email;
 }
 
 function handleInputName () {
@@ -124,3 +126,10 @@ function handleInputJob () {
 }
 
 inputJob.addEventListener('input', handleInputJob);
+
+function handleInputEmail () {
+  data.email = inputEmail.value;
+  updatePreview ();
+}
+
+inputEmail.addEventListener('input', handleInputEmail);
