@@ -43,9 +43,9 @@ function resetClick (event){
   jobPreview.innerHTML='Front-end Developer';
   //photoPreview.href='';
   emailPreview.href='';
-  //phonePreview.href='';
-  //linkedinPreview.href='';
-  //githubPreview.href='';
+  phonePreview.href='';
+  linkedinPreview.href='';
+  githubPreview.href='';
 }
 
 btnReset.addEventListener('click', resetClick);
@@ -112,6 +112,9 @@ function updatePreview () {
   }
 
   emailPreview.href = 'mailto:' + data.email;
+  phonePreview.href =  data.phone;
+  linkedinPreview.href =  'https://www.' + data.linkedin;
+  githubPreview.href = 'https://github.com/' + data.github;
 }
 
 function handleInputName () {
@@ -133,3 +136,24 @@ function handleInputEmail () {
 }
 
 inputEmail.addEventListener('input', handleInputEmail);
+
+function handleInputPhone () {
+  data.phone = inputPhone.value;
+  updatePreview ();
+}
+
+inputPhone.addEventListener('input', handleInputPhone);
+
+function handleInputLinkedin () {
+  data.linkedin = inputLinkedin.value;
+  updatePreview ();
+}
+
+inputLinkedin.addEventListener('input', handleInputLinkedin);
+
+function handleInputGithub () {
+  data.github = inputGithub.value;
+  updatePreview ();
+}
+
+inputGithub.addEventListener('input', handleInputGithub);
