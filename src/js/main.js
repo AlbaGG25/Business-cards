@@ -98,6 +98,11 @@ const data = {
   github: ''
 };
 
+
+
+
+
+
 function updatePreview () {
   if (data.name === ('')) {
     namePreview.innerHTML = 'Nombre Apellido';
@@ -112,10 +117,12 @@ function updatePreview () {
   }
 
   emailPreview.href = 'mailto:' + data.email;
-  phonePreview.href =  data.phone;
-  linkedinPreview.href =  'https://www.' + data.linkedin;
-  githubPreview.href = 'https://github.com/' + data.github;
+  phonePreview.href =   'tel:'+ data.phone;
+  linkedinPreview.href =  'https://www.linkedin.com/in/' + data.linkedin;
+  githubPreview.href = 'https://github.com/'  + data.github.replace ('@', '');
 }
+
+
 
 function handleInputName () {
   data.name = inputName.value;
