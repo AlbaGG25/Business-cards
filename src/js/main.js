@@ -1,17 +1,17 @@
 'use strict';
 
-/*1- boton reset
--evento
-2- enlazar los inputs del formulario
--con los iconos de la card
--con nombre y puesto
+/*
 3-paleta de colores
 -evento para cambiar de color
 4- crear evento para que al crear tarjeta se abra compartir en X
 */
 
-//variables imput fomulario
-//const palette = document.querySelector('.js-palet1');
+//VARIABLES IMPUT FORMULARIO
+
+//falta resolver tema cambio de paletas de colores
+//*const palette1 = document.querySelector('.js-palet1');
+//*const palette2 = document.querySelector('.js-palet2');
+//*const palette3 = document.querySelector('.js-palet3');
 const inputName = document.querySelector('.js-inputName');
 const inputJob = document.querySelector('.js-inputJob');
 const inputPhoto = document.querySelector('.js-inputPhoto');
@@ -21,17 +21,19 @@ const inputLinkedin = document.querySelector('.js-inputLinkedin');
 const inputGithub = document.querySelector('.js-inputGithub');
 const namePreview = document.querySelector ('.js-nameCard');
 const jobPreview = document.querySelector ('.js-jobCard');
-const photoPreview = document.querySelector ('.js-photoCard');
+//const photoPreview = document.querySelector ('.js-photoCard');
 const emailPreview = document.querySelector ('.js-emailCard');
 const phonePreview = document.querySelector ('.js-phoneCard');
 const linkedinPreview = document.querySelector ('.js-linkedinCard');
 const githubPreview = document.querySelector ('.js-githubCard');
-//Boton reset
+const btnCreate = document.querySelector ('.js-share-link')
+
+//BOTON DE RESET
 const btnReset = document.querySelector ('.js-reset');
 
 function resetClick (event){
   event.preventDefault();
-  //palette.value: 1;
+  //palette.value= 1;
   inputName.value='';
   inputJob.value='';
   inputPhoto.value='';
@@ -50,37 +52,60 @@ function resetClick (event){
 
 btnReset.addEventListener('click', resetClick);
 
+/*//PALETA DE COLORES
+//falta resolver cambio paletas de colores
+
+function handleChangePalette1() {
+  namePreview.classList.add('dirty-blue');
+  namePreview.classList.remove('dried-blood');
+  namePreview.classList.remove('slate');
+}
+
+palette1.addEventListener('change', handleChangePalette1);
+
+function handleChangePalette2() {
+  namePreview.classList.remove('dirty-blue');
+  namePreview.classList.add('dried-blood');
+  namePreview.classList.remove('slate');
+}
+
+palette2.addEventListener('change', handleChangePalette2);*/
+
+
 ///COLAPSABLES
 //variables collapsables
 const fieldsetDesign = document.querySelector('.js-fieldset_design');
 const fieldsetFill = document.querySelector('.js-fieldset_fill');
 const fieldsetShare = document.querySelector('.js-fieldset_share');
-// const fieldsetDiv2 = document.querySelector('.js-div2');
+const fieldsetDiv2 = document.querySelector('.js-div2');
 const legendDesign = document.querySelector('.js-design-legend');
 const legendFill = document.querySelector('.js-fill-legend');
 const legendShare = document.querySelector('.js-share-legend');
-// diseña
+// DISEÑA
 function handleClickLegendDesign() {
   fieldsetFill.classList.add('collapsed');
   fieldsetDesign.classList.remove('collapsed');
   fieldsetShare.classList.add('collapsed');
+  fieldsetDiv2.classList.add('form_share_div2-hidden');
 }
 
 legendDesign.addEventListener('click', handleClickLegendDesign);
 
-//rellena
+//RELLENA
 function handleClickLegendFill() {
   fieldsetFill.classList.remove('collapsed');
   fieldsetDesign.classList.add('collapsed');
   fieldsetShare.classList.add('collapsed');
+  fieldsetDiv2.classList.add('form_share_div2-hidden');
 }
 legendFill.addEventListener('click', handleClickLegendFill);
 
-//comparte
+//COMPARTE
 function handleClickLegendShare() {
   fieldsetFill.classList.add('collapsed');
   fieldsetDesign.classList.add('collapsed');
   fieldsetShare.classList.remove('collapsed');
+  
 }
 
 legendShare.addEventListener('click', handleClickLegendShare);
@@ -97,11 +122,6 @@ const data = {
   linkedin: '',
   github: ''
 };
-
-
-
-
-
 
 function updatePreview () {
   if (data.name === ('')) {
@@ -121,8 +141,6 @@ function updatePreview () {
   linkedinPreview.href =  'https://www.linkedin.com/in/' + data.linkedin;
   githubPreview.href = 'https://github.com/'  + data.github.replace ('@', '');
 }
-
-
 
 function handleInputName () {
   data.name = inputName.value;
@@ -164,3 +182,12 @@ function handleInputGithub () {
 }
 
 inputGithub.addEventListener('input', handleInputGithub);
+
+
+function handleClickBtnCreate (event){
+  event.preventDefault();
+  fieldsetDiv2.classList.remove ('form_share_div2-hidden');
+  fieldsetDiv2.classList.add ('form_share_div2');
+}
+
+btnCreate.addEventListener('click', handleClickBtnCreate);
