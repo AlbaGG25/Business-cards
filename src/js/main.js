@@ -105,7 +105,6 @@ function handleClickLegendShare() {
   fieldsetFill.classList.add('collapsed');
   fieldsetDesign.classList.add('collapsed');
   fieldsetShare.classList.remove('collapsed');
-  
 }
 
 legendShare.addEventListener('click', handleClickLegendShare);
