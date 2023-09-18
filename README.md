@@ -12,6 +12,8 @@ Edit card: It will allow you to modify the information of a graduate student, up
 
 View and send card: It will display the information of a particular student in a clear and organized manner, based on their corresponding card.
 
+http://beta.adalab.es/Project-Promo-U-Module-2-Team-5/
+
 ### Built 🛠️
 
 - HTML5 🔧
@@ -24,7 +26,7 @@ View and send card: It will display the information of a particular student in a
 
 ### Setup 🚀
 
-1. Clone the repo: `¿?` using:
+1. Clone the repo: `https://github.com/Adalab/Project-Promo-U-Module-2-Team-5.git` using:
 
 ```bash
  git clone
