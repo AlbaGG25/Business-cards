@@ -26,7 +26,7 @@ const emailPreview = document.querySelector ('.js-emailCard');
 const phonePreview = document.querySelector ('.js-phoneCard');
 const linkedinPreview = document.querySelector ('.js-linkedinCard');
 const githubPreview = document.querySelector ('.js-githubCard');
-const btnCreate = document.querySelector ('.js-share-link')
+const btnCreate = document.querySelector ('.js-share-link');
 
 //BOTON DE RESET
 const btnReset = document.querySelector ('.js-reset');
