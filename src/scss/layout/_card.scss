@@ -27,7 +27,8 @@
         align-content: center;
         justify-content: center;
         align-items: center;
-       font-family: $font-paragraph;
+        font-family: $font-paragraph;
+        cursor: pointer; 
 
         &_p{
             font-size: 1.2rem;

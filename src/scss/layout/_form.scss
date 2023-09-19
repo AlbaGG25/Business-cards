@@ -45,7 +45,6 @@
         align-items: flex-end;
         justify-content: right;
         gap: 1.5rem; 
-
     }
 
     &_colors {
@@ -170,6 +169,7 @@
         color: white;
         font-size: 1.8rem; 
         text-transform: uppercase;
+        cursor: pointer; 
     }
 
     &_div {
@@ -230,6 +230,10 @@
 }
 }
 
+.form-heading {
+    cursor: pointer; 
+}
+
 .collapsed {
     .form-heading{
         .collap-arrow{
@@ -240,4 +244,14 @@
         display: none;
     }
 
+}
+
+#palet1 {
+    cursor: pointer; 
+}
+#palet2 {
+    cursor: pointer; 
+}
+#palet3 {
+    cursor: pointer; 
 }
