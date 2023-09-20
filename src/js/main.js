@@ -9,8 +9,8 @@
 //VARIABLES IMPUT FORMULARIO
 
 //falta resolver tema cambio de paletas de colores
-//*const palette1 = document.querySelector('.js-palet1');
-//*const palette2 = document.querySelector('.js-palet2');
+const palette1 = document.querySelector('.js-palet1');
+const palette2 = document.querySelector('.js-palet2');
 //*const palette3 = document.querySelector('.js-palet3');
 const inputName = document.querySelector('.js-inputName');
 const inputJob = document.querySelector('.js-inputJob');
@@ -43,7 +43,7 @@ function resetClick (event){
   inputGithub.value='';
   namePreview.innerHTML='Nombre Apellido';
   jobPreview.innerHTML='Front-end Developer';
-  //photoPreview.href='';
+  photoPreview.href='';
   emailPreview.href='';
   phonePreview.href='';
   linkedinPreview.href='';
@@ -112,7 +112,7 @@ legendShare.addEventListener('click', handleClickLegendShare);
 
 ////INPUTS FORMULARIOS
 const data = {
-  //palette.value: 1;
+  palette.value: 1;
   name: '',
   job: '',
   photo:  '',
@@ -190,3 +190,13 @@ function handleClickBtnCreate (event){
 }
 
 btnCreate.addEventListener('click', handleClickBtnCreate);
+
+
+//cambio paletas de colores
+
+/*function handleChange2 (){
+  
+  if(valueImput2 )
+};
+
+palette2.addEventListener('change', handleChange2);*/
