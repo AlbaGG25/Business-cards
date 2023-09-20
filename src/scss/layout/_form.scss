@@ -102,15 +102,26 @@
         margin-left: 1rem;
         color: $gunmetal;
     }
+    &_formspan {
+        display: flex;
+    }
     &_formbutton{
         background-color: $color-orange;
         color:$color-white-two;
+        font-family: $font-paragraph;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
         border-radius: 3px;
         border-style: none; 
         width: 14rem;
         height: 3rem; 
         padding: 8px ;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    }
+    &_inputHidden {
+        display: none;
     }
     &_formlabel{
         font-family: $font-paragraph;

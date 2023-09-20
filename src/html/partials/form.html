@@ -55,9 +55,11 @@
             <label class="form_fill_formlabel">Puesto</label>
             <input type="text" placeholder="Ej: Front-end developer"  class="form_fill_forminput js-inputJob">
             <label class="form_fill_formlabel">Imagen de perfil</label>
-            <span>
-                <button type="text" class="form_fill_formbutton" >Añadir imagen</button> 
-                <input type="text" class="form_fill_forminputimg js-inputPhoto">
+            <span class="form_fill_formspan">
+                <label for="image" class="form_fill_formbutton"> Añadir Imagen</label>
+                <input type="file" id="image" class="form_fill_inputHidden js__profile-upload-btn">
+                <span class="form_fill_forminputimg js-inputPhoto js__profile-preview ">
+                </span>
             </span>
             <label class="form_fill_formlabel">Email</label>
             <input type="text" placeholder="tu-correo-electronico@email.com" class="form_fill_forminput js-inputEmail">
