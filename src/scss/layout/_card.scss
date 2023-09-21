@@ -124,18 +124,29 @@
 .iconPreview {
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   padding: 8px;
 }
 .icon1 {
     border: solid 2px $hospital-green;
     color: $color-green;
+    border-radius: 50%;
 }
 .icon2 {
     border: solid 2px $tomato;
     color: $dried-blood;
+    border-radius: 50%;
 }
 .icon3 {
     border: solid 2px $light-grey-blue;
     color: $slate;
+    border-radius: 50%;
 }
+// .link1{
+//   color: $color-green;
+// }
+// .link2{
+
+// }
+// .link3{
+  
+// }
