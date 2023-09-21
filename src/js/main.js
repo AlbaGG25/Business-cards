@@ -11,7 +11,7 @@
 //falta resolver tema cambio de paletas de colores
 const palette1 = document.querySelector('.js-palet1');
 const palette2 = document.querySelector('.js-palet2');
-//*const palette3 = document.querySelector('.js-palet3');
+const palette3 = document.querySelector('.js-palet3');
 const inputName = document.querySelector('.js-inputName');
 const inputJob = document.querySelector('.js-inputJob');
 const inputPhoto = document.querySelector('.js-inputPhoto');
@@ -27,6 +27,7 @@ const phonePreview = document.querySelector ('.js-phoneCard');
 const linkedinPreview = document.querySelector ('.js-linkedinCard');
 const githubPreview = document.querySelector ('.js-githubCard');
 const btnCreate = document.querySelector ('.js-share-link');
+const iconPreview = document.querySelector('.js-iconPreview');
 
 //BOTON DE RESET
 const btnReset = document.querySelector ('.js-reset');
@@ -43,7 +44,6 @@ function resetClick (event){
   inputGithub.value='';
   namePreview.innerHTML='Nombre Apellido';
   jobPreview.innerHTML='Front-end Developer';
-  photoPreview.href='';
   emailPreview.href='';
   phonePreview.href='';
   linkedinPreview.href='';
@@ -52,24 +52,41 @@ function resetClick (event){
 
 btnReset.addEventListener('click', resetClick);
 
-/*//PALETA DE COLORES
+//PALETA DE COLORES
 //falta resolver cambio paletas de colores
 
 function handleChangePalette1() {
-  namePreview.classList.add('dirty-blue');
-  namePreview.classList.remove('dried-blood');
-  namePreview.classList.remove('slate');
+  namePreview.classList.remove('palet2','palet3');
+  namePreview.classList.add('palet1');
+  jobPreview.classList.remove('border2','border3');
+  jobPreview.classList.add('border1');
+  iconPreview.classList.remove('icon2','icon3');
+  iconPreview.classList.add('icon1');
 }
 
 palette1.addEventListener('change', handleChangePalette1);
 
 function handleChangePalette2() {
-  namePreview.classList.remove('dirty-blue');
-  namePreview.classList.add('dried-blood');
-  namePreview.classList.remove('slate');
+  namePreview.classList.remove('palet1','palet3');
+  namePreview.classList.add('palet2');
+  jobPreview.classList.remove('border1','border3');
+  jobPreview.classList.add('border2');
+  iconPreview.classList.remove('icon1','icon3');
+  iconPreview.classList.add('icon2');
 }
 
-palette2.addEventListener('change', handleChangePalette2);*/
+palette2.addEventListener('change', handleChangePalette2);
+
+function handleChangePalette3() {
+  namePreview.classList.remove('palet1','palet2');
+  namePreview.classList.add('palet3');
+  jobPreview.classList.remove('border1','border2');
+  jobPreview.classList.add('border3');
+  iconPreview.classList.remove('icon1','icon2');
+  iconPreview.classList.add('icon3');
+}
+
+palette3.addEventListener('change', handleChangePalette3);
 
 
 ///COLAPSABLES
@@ -112,7 +129,7 @@ legendShare.addEventListener('click', handleClickLegendShare);
 
 ////INPUTS FORMULARIOS
 const data = {
-  palette.value: 1;
+  palette: 1 ,
   name: '',
   job: '',
   photo:  '',
@@ -195,7 +212,6 @@ btnCreate.addEventListener('click', handleClickBtnCreate);
 //cambio paletas de colores
 
 /*function handleChange2 (){
-  
   if(valueImput2 )
 };
 
