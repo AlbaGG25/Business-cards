@@ -60,8 +60,14 @@ function handleChangePalette1() {
   namePreview.classList.add('palet1');
   jobPreview.classList.remove('border2','border3');
   jobPreview.classList.add('border1');
-  iconPreview.classList.remove('icon2','icon3');
-  iconPreview.classList.add('icon1');
+  phonePreview.classList.remove('icon2','icon3');
+  phonePreview.classList.add('icon1');
+  emailPreview.classList.remove('icon2','icon3');
+  emailPreview.classList.add('icon1');
+  linkedinPreview.classList.remove('icon2','icon3');
+  linkedinPreview.classList.add('icon1');
+  githubPreview.classList.remove('icon2','icon3');
+  githubPreview.classList.add('icon1');
 }
 
 palette1.addEventListener('change', handleChangePalette1);
@@ -71,8 +77,14 @@ function handleChangePalette2() {
   namePreview.classList.add('palet2');
   jobPreview.classList.remove('border1','border3');
   jobPreview.classList.add('border2');
-  iconPreview.classList.remove('icon1','icon3');
-  iconPreview.classList.add('icon2');
+  githubPreview.classList.remove('icon1','icon3');
+  githubPreview.classList.add('icon2');
+  phonePreview.classList.remove('icon1','icon3');
+  phonePreview.classList.add('icon2');
+  emailPreview.classList.remove('icon1','icon3');
+  emailPreview.classList.add('icon2');
+  linkedinPreview.classList.remove('icon1','icon3');
+  linkedinPreview.classList.add('icon2');
 }
 
 palette2.addEventListener('change', handleChangePalette2);
@@ -82,8 +94,14 @@ function handleChangePalette3() {
   namePreview.classList.add('palet3');
   jobPreview.classList.remove('border1','border2');
   jobPreview.classList.add('border3');
-  iconPreview.classList.remove('icon1','icon2');
-  iconPreview.classList.add('icon3');
+  phonePreview.classList.remove('icon1','icon2');
+  phonePreview.classList.add('icon3');
+  emailPreview.classList.remove('icon1','icon2');
+  emailPreview.classList.add('icon3');
+  linkedinPreview.classList.remove('icon1','icon2');
+  linkedinPreview.classList.add('icon3');
+  githubPreview.classList.remove('icon1','icon2');
+  githubPreview.classList.add('icon3');
 }
 
 palette3.addEventListener('change', handleChangePalette3);
@@ -209,10 +227,3 @@ function handleClickBtnCreate (event){
 btnCreate.addEventListener('click', handleClickBtnCreate);
 
 
-//cambio paletas de colores
-
-/*function handleChange2 (){
-  if(valueImput2 )
-};
-
-palette2.addEventListener('change', handleChange2);*/
