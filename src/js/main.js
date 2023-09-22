@@ -1,10 +1,5 @@
 'use strict';
 
-/*
-3-paleta de colores
--evento para cambiar de color
-4- crear evento para que al crear tarjeta se abra compartir en X
-*/
 
 //VARIABLES IMPUT FORMULARIO
 
@@ -27,14 +22,16 @@ const phonePreview = document.querySelector ('.js-phoneCard');
 const linkedinPreview = document.querySelector ('.js-linkedinCard');
 const githubPreview = document.querySelector ('.js-githubCard');
 const btnCreate = document.querySelector ('.js-share-link');
-const iconPreview = document.querySelector('.js-iconPreview');
 
 //BOTON DE RESET
 const btnReset = document.querySelector ('.js-reset');
 
 function resetClick (event){
   event.preventDefault();
-  //palette.value= 1;
+  palette1.checked = true;
+  palette2.checked = false;
+  palette2.checked = false;
+  handleChangePalette1();
   inputName.value='';
   inputJob.value='';
   inputPhoto.value='';
@@ -43,7 +40,7 @@ function resetClick (event){
   inputLinkedin.value='';
   inputGithub.value='';
   namePreview.innerHTML='Nombre Apellido';
-  jobPreview.innerHTML='Front-end Developer';
+  jobPreview.innerHTML='Front-end developer';
   emailPreview.href='';
   phonePreview.href='';
   linkedinPreview.href='';
@@ -53,7 +50,6 @@ function resetClick (event){
 btnReset.addEventListener('click', resetClick);
 
 //PALETA DE COLORES
-//falta resolver cambio paletas de colores
 
 function handleChangePalette1() {
   namePreview.classList.remove('palet2','palet3');
