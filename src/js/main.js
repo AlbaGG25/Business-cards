@@ -48,7 +48,6 @@ function resetClick (event){
 }
 
 btnReset.addEventListener('click', resetClick);
-
 //PALETA DE COLORES
 
 function handleChangePalette1() {
@@ -222,4 +221,8 @@ function handleClickBtnCreate (event){
 
 btnCreate.addEventListener('click', handleClickBtnCreate);
 
-
+// const twttr = document.getElementById('xXx');
+// twttr.widgets.createShareButton(
+// 'https://awesome-profile-card.com?id=A456DF0001',{
+// text:'He creado mi tarjeta con Awesome Profile-Cards'});
+//https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/javascript-factory-function
