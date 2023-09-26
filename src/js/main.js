@@ -1,9 +1,7 @@
 'use strict';
 
-
 //VARIABLES IMPUT FORMULARIO
 
-//falta resolver tema cambio de paletas de colores
 const palette1 = document.querySelector('.js-palet1');
 const palette2 = document.querySelector('.js-palet2');
 const palette3 = document.querySelector('.js-palet3');
@@ -14,93 +12,109 @@ const inputEmail = document.querySelector('.js-inputEmail');
 const inputPhone = document.querySelector('.js-inputPhone');
 const inputLinkedin = document.querySelector('.js-inputLinkedin');
 const inputGithub = document.querySelector('.js-inputGithub');
-const namePreview = document.querySelector ('.js-nameCard');
-const jobPreview = document.querySelector ('.js-jobCard');
-//const photoPreview = document.querySelector ('.js-photoCard');
-const emailPreview = document.querySelector ('.js-emailCard');
-const phonePreview = document.querySelector ('.js-phoneCard');
-const linkedinPreview = document.querySelector ('.js-linkedinCard');
-const githubPreview = document.querySelector ('.js-githubCard');
-const btnCreate = document.querySelector ('.js-share-link');
+const namePreview = document.querySelector('.js-nameCard');
+const jobPreview = document.querySelector('.js-jobCard');
+const photoPreview = document.querySelector ('.js-photoCard');
+const emailPreview = document.querySelector('.js-emailCard');
+const phonePreview = document.querySelector('.js-phoneCard');
+const linkedinPreview = document.querySelector('.js-linkedinCard');
+const githubPreview = document.querySelector('.js-githubCard');
+const btnCreate = document.querySelector('.js-share-link');
+const errorMsj = document.querySelector('.js-p-error');
+const urlCard = document.querySelector('.js-url');
+
+const data = {
+  palette: 1,
+  name: '',
+  job: '',
+  photo: '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+};
 
 //BOTON DE RESET
-const btnReset = document.querySelector ('.js-reset');
+const btnReset = document.querySelector('.js-reset');
 
-function resetClick (event){
+function resetClick(event) {
   event.preventDefault();
   palette1.checked = true;
   palette2.checked = false;
   palette2.checked = false;
   handleChangePalette1();
-  inputName.value='';
-  inputJob.value='';
-  inputPhoto.value='';
-  inputEmail.value='';
-  inputPhone.value='';
-  inputLinkedin.value='';
-  inputGithub.value='';
-  namePreview.innerHTML='Nombre Apellido';
-  jobPreview.innerHTML='Front-end developer';
-  emailPreview.href='';
-  phonePreview.href='';
-  linkedinPreview.href='';
-  githubPreview.href='';
+  inputName.value = '';
+  inputJob.value = '';
+  inputPhoto.value = '';
+  inputEmail.value = '';
+  inputPhone.value = '';
+  inputLinkedin.value = '';
+  inputGithub.value = '';
+  namePreview.innerHTML = 'Nombre Apellido';
+  jobPreview.innerHTML = 'Front-end developer';
+  emailPreview.href = '';
+  phonePreview.href = '';
+  linkedinPreview.href = '';
+  githubPreview.href = '';
+  photoPreview.src = '';
 }
 
 btnReset.addEventListener('click', resetClick);
 //PALETA DE COLORES
 
 function handleChangePalette1() {
-  namePreview.classList.remove('palet2','palet3');
+  namePreview.classList.remove('palet2', 'palet3');
   namePreview.classList.add('palet1');
-  jobPreview.classList.remove('border2','border3');
+  jobPreview.classList.remove('border2', 'border3');
   jobPreview.classList.add('border1');
-  phonePreview.classList.remove('icon2','icon3');
+  phonePreview.classList.remove('icon2', 'icon3');
   phonePreview.classList.add('icon1');
-  emailPreview.classList.remove('icon2','icon3');
+  emailPreview.classList.remove('icon2', 'icon3');
   emailPreview.classList.add('icon1');
-  linkedinPreview.classList.remove('icon2','icon3');
+  linkedinPreview.classList.remove('icon2', 'icon3');
   linkedinPreview.classList.add('icon1');
-  githubPreview.classList.remove('icon2','icon3');
+  githubPreview.classList.remove('icon2', 'icon3');
   githubPreview.classList.add('icon1');
+  data.palette = 1;
 }
 
 palette1.addEventListener('change', handleChangePalette1);
 
 function handleChangePalette2() {
-  namePreview.classList.remove('palet1','palet3');
+  namePreview.classList.remove('palet1', 'palet3');
   namePreview.classList.add('palet2');
-  jobPreview.classList.remove('border1','border3');
+  jobPreview.classList.remove('border1', 'border3');
   jobPreview.classList.add('border2');
-  githubPreview.classList.remove('icon1','icon3');
+  githubPreview.classList.remove('icon1', 'icon3');
   githubPreview.classList.add('icon2');
-  phonePreview.classList.remove('icon1','icon3');
+  phonePreview.classList.remove('icon1', 'icon3');
   phonePreview.classList.add('icon2');
-  emailPreview.classList.remove('icon1','icon3');
+  emailPreview.classList.remove('icon1', 'icon3');
   emailPreview.classList.add('icon2');
-  linkedinPreview.classList.remove('icon1','icon3');
+  linkedinPreview.classList.remove('icon1', 'icon3');
   linkedinPreview.classList.add('icon2');
+  data.palette = 2;
 }
 
 palette2.addEventListener('change', handleChangePalette2);
 
 function handleChangePalette3() {
-  namePreview.classList.remove('palet1','palet2');
+  namePreview.classList.remove('palet1', 'palet2');
   namePreview.classList.add('palet3');
-  jobPreview.classList.remove('border1','border2');
+  jobPreview.classList.remove('border1', 'border2');
   jobPreview.classList.add('border3');
-  phonePreview.classList.remove('icon1','icon2');
+  phonePreview.classList.remove('icon1', 'icon2');
   phonePreview.classList.add('icon3');
-  emailPreview.classList.remove('icon1','icon2');
+  emailPreview.classList.remove('icon1', 'icon2');
   emailPreview.classList.add('icon3');
-  linkedinPreview.classList.remove('icon1','icon2');
+  linkedinPreview.classList.remove('icon1', 'icon2');
   linkedinPreview.classList.add('icon3');
-  githubPreview.classList.remove('icon1','icon2');
+  githubPreview.classList.remove('icon1', 'icon2');
   githubPreview.classList.add('icon3');
+  data.palette = 3;
 }
 
 palette3.addEventListener('change', handleChangePalette3);
-
 
 ///COLAPSABLES
 //variables collapsables
@@ -139,84 +153,88 @@ function handleClickLegendShare() {
 
 legendShare.addEventListener('click', handleClickLegendShare);
 
-
 ////INPUTS FORMULARIOS
-const data = {
-  palette: 1 ,
-  name: '',
-  job: '',
-  photo:  '',
-  email: '',
-  phone: '',
-  linkedin: '',
-  github: ''
-};
 
-function updatePreview () {
-  if (data.name === ('')) {
+
+function updatePreview() {
+  if (data.name === '') {
     namePreview.innerHTML = 'Nombre Apellido';
   } else {
     namePreview.innerHTML = data.name;
   }
 
-  if (data.job === ('')) {
-    jobPreview.innerHTML  = 'Front-end Developer';
+  if (data.job === '') {
+    jobPreview.innerHTML = 'Front-end Developer';
   } else {
     jobPreview.innerHTML = data.job;
   }
 
   emailPreview.href = 'mailto:' + data.email;
-  phonePreview.href =   'tel:'+ data.phone;
-  linkedinPreview.href =  'https://www.linkedin.com/in/' + data.linkedin;
-  githubPreview.href = 'https://github.com/'  + data.github.replace ('@', '');
+  phonePreview.href = 'tel:' + data.phone;
+  linkedinPreview.href = 'https://www.linkedin.com/in/' + data.linkedin;
+  githubPreview.href = 'https://github.com/' + data.github.replace('@', '');
 }
 
-function handleInputName () {
+function handleInputName() {
   data.name = inputName.value;
-  updatePreview ();
+  updatePreview();
 }
 inputName.addEventListener('input', handleInputName);
 
-function handleInputJob () {
+function handleInputJob() {
   data.job = inputJob.value;
-  updatePreview ();
+  updatePreview();
 }
 
 inputJob.addEventListener('input', handleInputJob);
 
-function handleInputEmail () {
+function handleInputEmail() {
   data.email = inputEmail.value;
-  updatePreview ();
+  updatePreview();
 }
 
 inputEmail.addEventListener('input', handleInputEmail);
 
-function handleInputPhone () {
+function handleInputPhone() {
   data.phone = inputPhone.value;
-  updatePreview ();
+  updatePreview();
 }
 
 inputPhone.addEventListener('input', handleInputPhone);
 
-function handleInputLinkedin () {
+function handleInputLinkedin() {
   data.linkedin = inputLinkedin.value;
-  updatePreview ();
+  updatePreview();
 }
 
 inputLinkedin.addEventListener('input', handleInputLinkedin);
 
-function handleInputGithub () {
+function handleInputGithub() {
   data.github = inputGithub.value;
-  updatePreview ();
+  updatePreview();
 }
 
 inputGithub.addEventListener('input', handleInputGithub);
 
-
-function handleClickBtnCreate (event){
+function handleClickBtnCreate(event) {
   event.preventDefault();
-  fieldsetDiv2.classList.remove ('form_share_div2-hidden');
-  fieldsetDiv2.classList.add ('form_share_div2');
+  fetch('https://dev.adalab.es/api/card/', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((responseJSON) => {
+      if (responseJSON.success === false) {
+        errorMsj.innerHTML = '¡Ups, algo está fallando!';
+      } else {
+        fieldsetDiv2.classList.remove('form_share_div2-hidden');
+        fieldsetDiv2.classList.add('form_share_div2');
+        urlCard.href = responseJSON.cardURL;
+        urlCard.innerHTML = responseJSON.cardURL;
+        localStorage.setItem('datainfo', JSON.stringify(data));
+      }
+    });
 }
 
 btnCreate.addEventListener('click', handleClickBtnCreate);
