@@ -245,7 +245,6 @@ function handleClickBtnCreate(event) {
         urlCard.innerHTML = responseJSON.cardURL;
         btnX.href = `https://twitter.com/intent/tweet?url=${urlCard.href}&text=He%20creado%20mi%20tarjeta%20con%20Awesome%20profile-card%21%21%21&`;
         localStorage.setItem('datainfo', JSON.stringify(data));
-        
       }
     });
 }
@@ -255,8 +254,26 @@ btnCreate.addEventListener('click', handleClickBtnCreate);
 
 //hacer funcion para localstorage
 
+function render(){
+  inputName.value = data.name;
+  inputJob.value = data.job;
+  inputPhoto.value = data.photo;
+  inputEmail.value = data.email;
+  inputPhone.value = data.phone;
+  inputLinkedin.value = data.linkedin;
+  inputGithub.value = data.github;
+  namePreview.innerHTML = data.name;
+  jobPreview.innerHTML = data.job;
+  emailPreview.href = data.email;
+  phonePreview.href = data.phone;
+  linkedinPreview.href = data.linkedin;
+  githubPreview.href = data.github;
+  profileImage.style.backgroundImage = data.photo;
+  profilePreview.style.backgroundImage = data.photo;
+}
+
 const dataLS = JSON.parse(localStorage.getItem('datainfo'));
-        if (dataLS !== null){
-          data = dataLS;
-         // render();
-        }
+if (dataLS !== null){
+  data = dataLS;
+  render();
+}
