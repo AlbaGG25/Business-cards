@@ -158,6 +158,7 @@ function handleClickLegendShare() {
   fieldsetFill.classList.add('collapsed');
   fieldsetDesign.classList.add('collapsed');
   fieldsetShare.classList.remove('collapsed');
+
 }
 
 legendShare.addEventListener('click', handleClickLegendShare);
@@ -238,21 +239,20 @@ function handleClickBtnCreate(event) {
     .then((responseJSON) => {
       if (responseJSON.success === false) {
         errorMsj.innerHTML = '¡Ups, algo está fallando!';
+        errorMsj.classList.remove('error-none');
       } else {
         fieldsetDiv2.classList.remove('form_share_div2-hidden');
         fieldsetDiv2.classList.add('form_share_div2');
+        errorMsj.classList.add('error-none');
         urlCard.href = responseJSON.cardURL;
         urlCard.innerHTML = responseJSON.cardURL;
-        btnX.href = `https://twitter.com/intent/tweet?url=${urlCard.href}&text=He%20creado%20mi%20tarjeta%20con%20Awesome%20profile-card%21%21%21&`;
+        btnX.href = `https://twitter.com/intent/tweet?url=${urlCard.href}&text=He%20creado%20mi%20tarjeta%20con%20Awesome%20profile-card&`;
         localStorage.setItem('datainfo', JSON.stringify(data));
       }
     });
 }
 
 btnCreate.addEventListener('click', handleClickBtnCreate);
-
-
-//hacer funcion para localstorage
 
 function render(){
   inputName.value = data.name;
