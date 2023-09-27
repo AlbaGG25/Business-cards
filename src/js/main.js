@@ -14,12 +14,13 @@ const inputLinkedin = document.querySelector('.js-inputLinkedin');
 const inputGithub = document.querySelector('.js-inputGithub');
 const namePreview = document.querySelector('.js-nameCard');
 const jobPreview = document.querySelector('.js-jobCard');
-const photoPreview = document.querySelector ('.js-photoCard');
+
 const emailPreview = document.querySelector('.js-emailCard');
 const phonePreview = document.querySelector('.js-phoneCard');
 const linkedinPreview = document.querySelector('.js-linkedinCard');
 const githubPreview = document.querySelector('.js-githubCard');
 const btnCreate = document.querySelector('.js-share-link');
+const btnX = document.querySelector('.js-x');
 const errorMsj = document.querySelector('.js-p-error');
 const urlCard = document.querySelector('.js-url');
 
@@ -56,7 +57,16 @@ function resetClick(event) {
   phonePreview.href = '';
   linkedinPreview.href = '';
   githubPreview.href = '';
-  photoPreview.src = '';
+  profileImage.style.backgroundImage = `url("./assets/images/lisa.jpg")`;
+  profilePreview.style.backgroundImage = `url("./assets/images/lisa.jpg")`;
+  data.photo = '';
+  data.palette = 1,
+  data.name= '',
+  data.job= '',
+  data.email= '',
+  data.phone= '',
+  data.linkedin= '',
+  data.github= '',
 }
 
 btnReset.addEventListener('click', resetClick);
@@ -239,8 +249,17 @@ function handleClickBtnCreate(event) {
 
 btnCreate.addEventListener('click', handleClickBtnCreate);
 
-// const twttr = document.getElementById('xXx');
-// twttr.widgets.createShareButton(
-// 'https://awesome-profile-card.com?id=A456DF0001',{
-// text:'He creado mi tarjeta con Awesome Profile-Cards'});
-//https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/javascript-factory-function
+
+
+function handleClickX (event){
+  event.preventDefault();
+  const twttr = document.getElementById('xXx');
+  twttr.widgets.createShareButton(urlCard.href,
+    {text:'He creado mi tarjeta con Awesome Profile-Cards'});
+
+}
+
+
+btnX.addEventListener('click', handleClickX);
+
+/*https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/javascript-factory-function*/

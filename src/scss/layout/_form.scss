@@ -1,8 +1,3 @@
-
-
-
-
-
 .form {
    
     @media screen and (min-width:768px) {
@@ -136,6 +131,8 @@
         height: 3rem; 
         margin-left: 2rem;
         border: $hospital-green solid 1px; 
+        background-size: cover;
+        //background-image: url("../images/lisa.jpg");
     }
 }
 
@@ -255,6 +252,12 @@
         display: none;
     }
 
+}
+
+.error{
+    font-size: 1.8rem;
+    font-family: $font-paragraph;
+    padding-top: 10px;
 }
 
 #palet1 {
