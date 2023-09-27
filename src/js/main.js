@@ -14,7 +14,6 @@ const inputLinkedin = document.querySelector('.js-inputLinkedin');
 const inputGithub = document.querySelector('.js-inputGithub');
 const namePreview = document.querySelector('.js-nameCard');
 const jobPreview = document.querySelector('.js-jobCard');
-
 const emailPreview = document.querySelector('.js-emailCard');
 const phonePreview = document.querySelector('.js-phoneCard');
 const linkedinPreview = document.querySelector('.js-linkedinCard');
@@ -24,7 +23,7 @@ const btnX = document.querySelector('.js-x');
 const errorMsj = document.querySelector('.js-p-error');
 const urlCard = document.querySelector('.js-url');
 
-const data = {
+let data = {
   palette: 1,
   name: '',
   job: '',
@@ -60,13 +59,13 @@ function resetClick(event) {
   profileImage.style.backgroundImage = `url("./assets/images/lisa.jpg")`;
   profilePreview.style.backgroundImage = `url("./assets/images/lisa.jpg")`;
   data.photo = '';
-  data.palette = 1,
-  data.name= '',
-  data.job= '',
-  data.email= '',
-  data.phone= '',
-  data.linkedin= '',
-  data.github= '',
+  data.palette = 1;
+  data.name= '';
+  data.job= '';
+  data.email= '';
+  data.phone= '';
+  data.linkedin= '';
+  data.github= '';
 }
 
 btnReset.addEventListener('click', resetClick);
@@ -226,6 +225,8 @@ function handleInputGithub() {
 
 inputGithub.addEventListener('input', handleInputGithub);
 
+
+
 function handleClickBtnCreate(event) {
   event.preventDefault();
   fetch('https://dev.adalab.es/api/card/', {
@@ -242,7 +243,9 @@ function handleClickBtnCreate(event) {
         fieldsetDiv2.classList.add('form_share_div2');
         urlCard.href = responseJSON.cardURL;
         urlCard.innerHTML = responseJSON.cardURL;
+        btnX.href = `https://twitter.com/intent/tweet?url=${urlCard.href}&text=He%20creado%20mi%20tarjeta%20con%20Awesome%20profile-card%21%21%21&`;
         localStorage.setItem('datainfo', JSON.stringify(data));
+        
       }
     });
 }
@@ -250,16 +253,10 @@ function handleClickBtnCreate(event) {
 btnCreate.addEventListener('click', handleClickBtnCreate);
 
 
+//hacer funcion para localstorage
 
-function handleClickX (event){
-  event.preventDefault();
-  const twttr = document.getElementById('xXx');
-  twttr.widgets.createShareButton(urlCard.href,
-    {text:'He creado mi tarjeta con Awesome Profile-Cards'});
-
-}
-
-
-btnX.addEventListener('click', handleClickX);
-
-/*https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/javascript-factory-function*/
+const dataLS = JSON.parse(localStorage.getItem('datainfo'));
+        if (dataLS !== null){
+          data = dataLS;
+         // render();
+        }
