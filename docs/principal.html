@@ -68,7 +68,7 @@
               </legend>
               <span class="form_design_colors collap-colors">colores</span>
               <div class="form_design_palets collap-colors">
-                  <label for="palet1">
+                  <label class='radio' for="palet1">
                       <input class="js-palet1 "
                       id="palet1"
                       type="radio"
@@ -79,7 +79,7 @@
                      <img src="./assets/images/palet1.jpg" alt="Es la paleta 1"/>
                   </label>
                   
-                  <label for="palet2">
+                  <label class='radio' for="palet2">
                       <input class="js-palet2"
                       id="palet2"
                       type="radio"
@@ -89,7 +89,7 @@
                       <img src="./assets/images/palet2.jpg" alt="Es la paleta 2"/>
                   </label>
 
-                  <label for="palet3">
+                  <label class='radio' for="palet3">
                       <input class="js-palet3"
                       id="palet3"
                       type="radio"
@@ -109,24 +109,24 @@
                   <i class="fa-solid fa-chevron-up arrow collap-arrow"></i>
               </legend>
               <div class="form_fill_form collap-fill">
-                  <label class="form_fill_formlabel ">Nombre completo</label>
+                  <label class="form_fill_formlabel " > Nombre completo <i class="fa-solid fa-asterisk fa-2xs asterisk"></i></label>
                   <input type="" placeholder="Nombre completo" class="form_fill_forminput js-inputName" required>
-                  <label class="form_fill_formlabel">Puesto</label>
+                  <label class="form_fill_formlabel"> Puesto <i class="fa-solid fa-asterisk fa-2xs asterisk"></i></label>
                   <input type="text" placeholder="Ej: Front-end developer"  class="form_fill_forminput js-inputJob" required>
-                  <label class="form_fill_formlabel">Imagen de perfil</label>
+                  <label class="form_fill_formlabel"> Imagen de perfil <i class="fa-solid fa-asterisk fa-2xs asterisk"></i></label>
                   <span class="form_fill_formspan" >
                       <label for="image" class="form_fill_formbutton"> Añadir Imagen</label>
                       <input type="file" id="image" class="form_fill_inputHidden js__profile-upload-btn" required>
                       <span class="form_fill_forminputimg js-inputPhoto js__profile-preview ">
                       </span>
                   </span>
-                  <label for="emailAddress" class="form_fill_formlabel">Email</label>
+                  <label for="emailAddress" class="form_fill_formlabel"> Email <i class="fa-solid fa-asterisk fa-2xs asterisk"></i></label>
                   <input type="email" name="emailAddress" placeholder="tu-correo-electronico@email.com" class="form_fill_forminput js-inputEmail"required>
-                  <label class="form_fill_formlabel">Teléfono</label>
+                  <label class="form_fill_formlabel"> Teléfono <i class="fa-solid fa-asterisk fa-2xs asterisk"></i></label>
                   <input type="tel" placeholder="555-55-55-55" class="form_fill_forminput js-inputPhone">
-                  <label class="form_fill_formlabel">Linkedin</label>
+                  <label class="form_fill_formlabel"> Linkedin <i class="fa-solid fa-asterisk fa-2xs asterisk"></i></label>
                   <input type="text" placeholder="tu-nombre-de-usuaria" class="form_fill_forminput js-inputLinkedin" required>
-                  <label class="form_fill_formlabel">Github</label>
+                  <label class="form_fill_formlabel"> Github <i class="fa-solid fa-asterisk fa-2xs asterisk"></i></label>
                   <input type="text" placeholder="tu-nombre-de-usuaria"   class="form_fill_forminput js-inputGithub" required>
               </div>
           </fieldset>
