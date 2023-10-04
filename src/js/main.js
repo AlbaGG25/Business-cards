@@ -33,7 +33,11 @@ let data = {
   linkedin: '',
   github: '',
 };
-
+const dataLS = JSON.parse(localStorage.getItem('datainfo'));
+if (dataLS !== null){
+  data = dataLS;
+  render();
+}
 //BOTON DE RESET
 const btnReset = document.querySelector('.js-reset');
 
@@ -66,6 +70,8 @@ function resetClick(event) {
   data.phone= '';
   data.linkedin= '';
   data.github= '';
+  localStorage.removeItem('datainfo');
+  location.reload();
 }
 
 btnReset.addEventListener('click', resetClick);
@@ -150,6 +156,7 @@ function handleClickLegendFill() {
   fieldsetDesign.classList.add('collapsed');
   fieldsetShare.classList.add('collapsed');
   fieldsetDiv2.classList.add('form_share_div2-hidden');
+  errorMsj.classList.add('error-none');
 }
 legendFill.addEventListener('click', handleClickLegendFill);
 
@@ -272,10 +279,5 @@ function render(){
   profilePreview.style.backgroundImage = data.photo;
 }
 
-const dataLS = JSON.parse(localStorage.getItem('datainfo'));
-if (dataLS !== null){
-  data = dataLS;
-  render();
-}
 
-...jfhahfdas
+
