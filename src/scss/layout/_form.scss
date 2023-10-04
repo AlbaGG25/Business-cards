@@ -122,6 +122,7 @@
         font-size: 1.4rem; 
     }
     &_forminput {
+        padding: 10px;
         height: 3rem; 
         border: $hospital-green solid 1px; 
     }
@@ -147,9 +148,6 @@
     align-items: center;
     padding: 2.5rem 2.5rem 2.5rem 2.5rem; 
     border-bottom: 0.5px solid $white-three;
-     
-
-
     &_legend {
         display: flex; 
         justify-content: space-between;
@@ -159,7 +157,6 @@
         font-size: 1.2rem;
         padding-top: 2.5rem;
         width: 100%;
-
         & div {
             display: flex; 
         }
@@ -268,6 +265,7 @@ display: none;
 
 #palet1 {
     cursor: pointer; 
+
 }
 #palet2 {
     cursor: pointer; 
