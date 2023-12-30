@@ -1,4 +1,4 @@
-# ***Proyecto de Tarjetas para Organizar a los Alumnos Graduados***
+# ***Business Cards Project***
 
 ### Description 💬
 This project involves developing a virtual card system to organize and maintain a record of the students who have graduated from the school. These cards will efficiently store individualized information for each student, making it easier to search and access.
